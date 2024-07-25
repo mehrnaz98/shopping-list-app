@@ -17,10 +17,12 @@ const saveItem = () => {
     highPriority: newItemHighPriority.value,
   });
   newItem.value = "";
+  newItemHighPriority.value = "";
 };
 const doEdit = (isEditing) => {
   editing.value = isEditing; // Set editing to true or false based on isEditing
   newItem.value = "";
+  newItemHighPriority.value = "";
 };
 const togglePurchased = (item) => {
   item.purchased = !item.purchased;
