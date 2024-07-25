@@ -13,7 +13,7 @@ const newItemHighPriority = ref(false);
 
 <template>
   <h1>{{ header }}</h1>
-  <form>
+  <form class="add-item-form">
     <input
       v-model.trim="newItem"
       v-on:keyup.enter="items.push({ id: items.length + 1, label: newItem })"
@@ -24,7 +24,10 @@ const newItemHighPriority = ref(false);
       <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
-    <button v-on:click="items.push({ id: items.length + 1, label: newItem })">
+    <button
+      class="btn btn-primary"
+      v-on:click="items.push({ id: items.length + 1, label: newItem })"
+    >
       Save Item
     </button>
   </form>
