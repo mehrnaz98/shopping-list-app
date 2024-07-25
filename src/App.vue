@@ -18,6 +18,7 @@ const newItemHighPriority = ref(false);
     <input type="checkbox" v-model="newItemHighPriority" />
     High Priority
   </label>
+  <button>Save Item</button>
   <ul>
     <li v-for="item in items" :key="item.id">
       {{ item.id }}. {{ item.label }}
