@@ -18,6 +18,9 @@ const doEdit = (isEditing) => {
   editing.value = isEditing; // Set editing to true or false based on isEditing
   newItem.value = "";
 };
+const togglePurchased = (item) => {
+  item.purchased = !item.purchased;
+};
 </script>
 
 <template>
@@ -44,6 +47,7 @@ const doEdit = (isEditing) => {
     <li
       v-for="item in items"
       :key="item.id"
+      @click="togglePurchased(item)"
       :class="{
         strikeout: item.purchased,
       }"
