@@ -23,7 +23,9 @@ const doEdit = (isEditing) => {
 <template>
   <div class="header">
     <h1>{{ header }}</h1>
-    <button v-if="editing" class="btn" @click="doEdit(false)">Cancel</button>
+    <button v-if="editing" class="btn btn-cancel" @click="doEdit(false)">
+      Cancel
+    </button>
     <button v-else class="btn btn-primary" @click="doEdit(true)">
       Add Item
     </button>

@@ -82,6 +82,14 @@ li input {
   transition: all 0.1s ease-in;
 }
 
+.btn[disabled] {
+  background: #8795a1;
+}
+
+.btn[disabled]:hover {
+  background: #606f7b;
+}
+
 .btn-primary {
   background: #6cb2eb;
   color: #fff;
@@ -89,6 +97,16 @@ li input {
 
 .btn-primary:hover {
   background: #3490dc;
+}
+
+.btn-cancel {
+  background: #f0f0f0;
+  color: black;
+}
+
+.btn-cancel:hover {
+  background: #dedede;
+  color: black;
 }
 
 input[type="checkbox"] {
