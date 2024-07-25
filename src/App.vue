@@ -2,6 +2,7 @@
 import { ref } from "vue";
 
 const header = ref("Shopping List App");
+const editing = ref(false);
 const items = ref([
   // { id: 1, label: "Milk" },
   // { id: 2, label: "Egg" },
