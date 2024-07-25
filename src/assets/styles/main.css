@@ -109,6 +109,15 @@ li input {
   color: black;
 }
 
+.strikeout {
+  text-decoration: line-through;
+  color: #b8c2cc;
+}
+
+.strikeout:hover {
+  color: #8795a1;
+}
+
 input[type="checkbox"] {
   display: inline !important;
   box-shadow: none;
