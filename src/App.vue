@@ -36,7 +36,7 @@ const doEdit = (isEditing) => {
       <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
-    <button v-bind:disabled="newItem.length === 0" class="btn btn-primary">
+    <button :disabled="newItem.length === 0" class="btn btn-primary">
       Save Item
     </button>
   </form>
