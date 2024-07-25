@@ -4,9 +4,9 @@ import { ref } from "vue";
 const header = ref("Shopping List App");
 const editing = ref(false);
 const items = ref([
-  { id: 1, label: "Milk", purchased: true },
-  { id: 2, label: "Egg", purchased: true },
-  { id: 3, label: "Apple", purchased: false },
+  { id: 1, label: "Milk", purchased: true, highPriority: false },
+  { id: 2, label: "Egg", purchased: true, highPriority: false },
+  { id: 3, label: "Apple", purchased: false, highPriority: true },
 ]);
 const newItem = ref("");
 const newItemHighPriority = ref(false);
@@ -50,6 +50,7 @@ const togglePurchased = (item) => {
       @click="togglePurchased(item)"
       :class="{
         strikeout: item.purchased,
+        priority: item.highPriority,
       }"
     >
       {{ item.id }}. {{ item.label }}
