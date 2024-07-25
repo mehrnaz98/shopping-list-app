@@ -21,7 +21,13 @@ const doEdit = (isEditing) => {
 </script>
 
 <template>
-  <h1>{{ header }}</h1>
+  <div class="header">
+    <h1>{{ header }}</h1>
+    <button v-if="editing" class="btn" @click="doEdit(false)">Cancel</button>
+    <button v-else class="btn btn-primary" @click="doEdit(true)">
+      Add Item
+    </button>
+  </div>
   <form class="add-item-form" v-if="editing" @submit.prevent="saveItem">
     <input v-model.trim="newItem" type="text" placeholder="Add an item" />
     <label>
