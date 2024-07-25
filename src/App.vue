@@ -11,7 +11,11 @@ const items = ref([
 const newItem = ref("");
 const newItemHighPriority = ref(false);
 const saveItem = () => {
-  items.value.push({ id: items.value.length + 1, label: newItem.value });
+  items.value.push({
+    id: items.value.length + 1,
+    label: newItem.value,
+    highPriority: newItemHighPriority.value,
+  });
   newItem.value = "";
 };
 const doEdit = (isEditing) => {
