@@ -4,9 +4,9 @@ import { ref } from "vue";
 const header = ref("Shopping List App");
 const editing = ref(false);
 const items = ref([
-  // { id: 1, label: "Milk" },
-  // { id: 2, label: "Egg" },
-  // { id: 3, label: "Apple" },
+  { id: 1, label: "Milk", purchased: true },
+  { id: 2, label: "Egg", purchased: true },
+  { id: 3, label: "Apple", purchased: false },
 ]);
 const newItem = ref("");
 const newItemHighPriority = ref(false);
@@ -41,7 +41,13 @@ const doEdit = (isEditing) => {
     </button>
   </form>
   <ul>
-    <li v-for="item in items" :key="item.id">
+    <li
+      v-for="item in items"
+      :key="item.id"
+      :class="{
+        strikeout: item.purchased,
+      }"
+    >
       {{ item.id }}. {{ item.label }}
     </li>
   </ul>
