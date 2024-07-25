@@ -15,7 +15,7 @@ const newItemHighPriority = ref(false);
   <h1>{{ header }}</h1>
   <form
     class="add-item-form"
-    v-on:submit="items.push({ id: items.length + 1, label: newItem })"
+    v-on:submit.prevent="items.push({ id: items.length + 1, label: newItem })"
   >
     <input v-model.trim="newItem" type="text" placeholder="Add an item" />
     <label>
