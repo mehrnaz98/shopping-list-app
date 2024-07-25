@@ -118,6 +118,10 @@ li input {
   color: #8795a1;
 }
 
+.priority {
+  color: #d66000;
+}
+
 input[type="checkbox"] {
   display: inline !important;
   box-shadow: none;
