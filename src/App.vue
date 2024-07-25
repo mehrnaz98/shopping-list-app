@@ -14,6 +14,10 @@ const saveItem = () => {
   items.value.push({ id: items.value.length + 1, label: newItem.value });
   newItem.value = "";
 };
+const doEdit = (isEditing) => {
+  editing.value = isEditing; // Set editing to true or false based on isEditing
+  newItem.value = "";
+};
 </script>
 
 <template>
