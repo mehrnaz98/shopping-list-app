@@ -18,7 +18,7 @@ const saveItem = () => {
 
 <template>
   <h1>{{ header }}</h1>
-  <form class="add-item-form" @submit.prevent="saveItem">
+  <form class="add-item-form" v-if="editing" @submit.prevent="saveItem">
     <input v-model.trim="newItem" type="text" placeholder="Add an item" />
     <label>
       <input type="checkbox" v-model="newItemHighPriority" />
