@@ -3,9 +3,9 @@ import { ref } from "vue";
 
 const header = ref("Shopping List App");
 const items = ref([
-  { id: 1, label: "Milk" },
-  { id: 2, label: "Egg" },
-  { id: 3, label: "Apple" },
+  // { id: 1, label: "Milk" },
+  // { id: 2, label: "Egg" },
+  // { id: 3, label: "Apple" },
 ]);
 const newItem = ref("");
 const newItemHighPriority = ref(false);
@@ -30,4 +30,5 @@ const saveItem = () => {
       {{ item.id }}. {{ item.label }}
     </li>
   </ul>
+  <p v-if="!items.length">Your shopping list is empty. Add some items!</p>
 </template>
