@@ -8,8 +8,8 @@ const items = ref(["milk", "egg", "apple"]);
 <template>
   <h1>{{ header }}</h1>
   <ul>
-    <li>
-      {{ items }}
+    <li v-for="(item, index) in items" :key="index">
+      {{ item }}
     </li>
   </ul>
 </template>
