@@ -7,10 +7,12 @@ const items = ref([
   { id: 2, label: "Egg" },
   { id: 3, label: "Apple" },
 ]);
+const newItem = ref("");
 </script>
 
 <template>
   <h1>{{ header }}</h1>
+  <input v-model.trim="newItem" type="text" placeholder="Add an item" />
   <ul>
     <li v-for="item in items" :key="item.id">
       {{ item.id }}. {{ item.label }}
