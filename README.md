@@ -1,31 +1,11 @@
-# shopping-list-app
+# Shopping list app
 
-Simple app for creating, managing, and organizing shopping list items
+Simple app for creating, managing, and organizing shopping list items.
 
-## Project setup
+## Live Demo
 
-```
-npm install
-```
+You can view the live version of this project here: [View on Netlify](https://lucent-bunny-e95b96.netlify.app/)
 
-### Compiles and hot-reloads for development
+## Project Acknowledgment
 
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This shopping list app was developed by me as part of the Vue.js 3 Fundamentals with the Composition API course taught by Daniel Kelly at Vue School.
